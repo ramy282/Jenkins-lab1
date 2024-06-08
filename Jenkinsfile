@@ -1,11 +1,6 @@
 @Library('shared-library')_
 pipeline {
-    agent { 
-        // Specifies a label to select an available agent
-         node { 
-             label 'slave1'
-         }
-    }
+    agent any 
     
     environment {
         dockerHubCredentialsID	    = 'DockerHub'  		    			// DockerHub credentials ID.
