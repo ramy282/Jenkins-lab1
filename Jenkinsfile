@@ -3,7 +3,7 @@ pipeline {
     agent any 
     
     environment {
-        dockerHubCredentialsID	    = 'DockerHub'  		    			// DockerHub credentials ID.
+        dockerHubCredentialsID	    = 'DockerHub-cred'  		    			// DockerHub credentials ID.
         imageName   		    = 'ramy282/jenkins-lab1' 	    			// DockerHub repo/image name.
 	openshiftCredentialsID	    = 'openshift-token'		         		// service account token credentials ID
 	openshiftClusterURL	    = 'https://api.ocp-training.ivolve-test.com:6443'   // OpenShift Cluser URL.
