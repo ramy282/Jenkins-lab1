@@ -2,7 +2,7 @@
 FROM gradle:7.3.3-jdk11 AS build
 
 # Set the working directory
-WORKDIR /app
+WORKDIR /Jenkins-lab1
 
 # Copy only the build files needed for dependency resolution
 COPY build.gradle settings.gradle ./
@@ -22,10 +22,10 @@ RUN ./gradlew build --stacktrace
 FROM adoptopenjdk:11-jre-hotspot
 
 # Set the working directory
-WORKDIR /app
+WORKDIR /Jenkins-lab1
 
 # Copy the JAR file from the build stage
-COPY --from=build /app/build/libs/demo-0.0.1-SNAPSHOT.jar app.jar
+COPY --from=build /Jenkins-lab1/build/libs/demo-0.0.1-SNAPSHOT.jar app.jar
 
 # Expose the port your app runs on
 EXPOSE 8081
