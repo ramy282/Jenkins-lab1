@@ -11,18 +11,6 @@ pipeline {
 
     }
      stages {
-
-        stage('Test') {
-            steps {
-                script {
-                        
-                	    echo "Running Unit Test..."
-			            // sh 'chmod 744 ./gradlew'
-			            // sh './gradlew clean test'
-                        
-                    }
-        	    }
-    	    }
 	
         stage('Build Docker Image') {
             steps {
